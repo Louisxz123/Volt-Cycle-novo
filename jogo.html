@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo — VoltCycle Simulator</title>
+<link rel="stylesheet" href="shared/tokens.css">
+<link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">V</span><span class="brand-name">VoltCycle</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="como-usar.html">Como Usar</a></li>
+        <li><a href="produto.html">Produto</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="jogo.html" aria-current="page">Jogo</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Ativar modo escuro">🌙</button>
+      <a href="login.html" class="btn btn-outline btn-sm">Entrar</a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="como-usar.html">Como Usar</a></li>
+      <li><a href="produto.html">Produto</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
+      <li><a href="referencias.html">Referências</a></li>
+      <li><a href="jogo.html">Jogo</a></li>
+    </ul>
+    <a href="login.html" class="btn btn-primary btn-block">Entrar</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>VoltCycle Simulator</h1>
+        <p>Experimente o monitoramento em tempo real! Mantenha sua frequência cardíaca e bateria sob controle.</p>
+      </div>
+
+      <div class="game-card">
+        <div class="game-header">
+          <h2>Pronto para pedalar?</h2>
+          <div class="game-record">🏆 Recorde: <span id="recordValue">0</span></div>
+        </div>
+
+        <div class="game-stats">
+          <div class="stat">
+            <span class="stat-label">Pontuação</span>
+            <span class="stat-value" id="scoreValue">0</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">❤️ BPM</span>
+            <span class="stat-value" id="bpmValue">75</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">🔋 Bateria</span>
+            <span class="stat-value" id="batteryValue">100%</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Distância</span>
+            <span class="stat-value" id="distanceValue">0.0km</span>
+          </div>
+        </div>
+
+        <div class="gauge">
+          <div class="gauge-label"><span>Frequência Cardíaca</span><span id="bpmStatus">Normal</span></div>
+          <div class="gauge-track"><div class="gauge-fill gauge-heart" id="bpmBar" style="width:41%"></div></div>
+        </div>
+        <div class="gauge">
+          <div class="gauge-label"><span>Bateria</span><span id="batteryStatus">Boa</span></div>
+          <div class="gauge-track"><div class="gauge-fill gauge-battery" id="batteryBar" style="width:100%"></div></div>
+        </div>
+        <div class="gauge">
+          <div class="gauge-label"><span>Velocidade</span><span id="speedStatus">0 km/h</span></div>
+          <div class="gauge-track"><div class="gauge-fill gauge-speed" id="speedBar" style="width:0%"></div></div>
+        </div>
+
+        <button class="btn btn-primary btn-block game-btn" id="toggleBtn">▶ Começar Trajeto</button>
+      </div>
+
+      <div class="card mt-32">
+        <h3>ℹ️ Como Jogar</h3>
+        <ul class="how-to">
+          <li>Objetivo: Percorra a maior distância possível mantendo os parâmetros saudáveis</li>
+          <li>Controles: Use os botões para acelerar ou desacelerar</li>
+          <li>BPM: Mantenha entre 50–160 BPM para não ser alertado</li>
+          <li>Bateria: Velocidade alta consome mais energia</li>
+          <li>Pontuação: Quanto mais rápido você pedala, mais pontos ganha</li>
+        </ul>
+        <div class="speed-controls mt-24">
+          <button class="btn btn-outline" id="btnSlower">🐢 Desacelerar</button>
+          <button class="btn btn-outline" id="btnFaster">⚡ Acelerar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="brand"><span class="brand-mark">V</span><span class="brand-name">VoltCycle</span></a>
+        <p>Módulo inteligente para bicicletas com monitoramento cardiovascular por IA, assistência elétrica adaptativa e carregamento cinético do celular.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub"><img src="./icons/github-brands-solid.png" alt="GitHub" width="24" height="24"></a>
+          <a href="#" aria-label="LinkedIn"><img src="./icons/linkedin-in-brands-solid.png" alt="LinkedIn" width="24" height="24"></a>
+          <a href="#" aria-label="E-mail"><img src="./icons/envelope-regular.png" alt="E-mail" width="24" height="24"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="como-usar.html">Como Usar</a></li>
+          <li><a href="produto.html">Produto</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recursos</h3>
+        <ul>
+          <li><a href="referencias.html">Referências</a></li>
+          <li><a href="jogo.html">Jogo Interativo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VoltCycle. Todos os direitos reservados.</span>
+      <span>Feito com ❤️ para ciclistas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="shared/main.js"></script>
+<script src="jogo.js"></script>
+</body>
+</html>

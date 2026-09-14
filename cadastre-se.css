@@ -1,0 +1,14 @@
+.auth-card { max-width: 440px; }
+.password-strength {
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-soft);
+  margin-top: 8px;
+  overflow: hidden;
+}
+.password-strength-fill {
+  height: 100%;
+  width: 0%;
+  transition: width .2s ease, background-color .2s ease;
+  background: #ef4444;
+}

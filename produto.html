@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produto — VoltCycle</title>
+<link rel="stylesheet" href="shared/tokens.css">
+<link rel="stylesheet" href="produto.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">V</span><span class="brand-name">VoltCycle</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="como-usar.html">Como Usar</a></li>
+        <li><a href="produto.html" aria-current="page">Produto</a></li>
+        <li><a href="quem-somos.html">Quem Somos</a></li>
+        <li><a href="referencias.html">Referências</a></li>
+        <li><a href="jogo.html">Jogo</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Ativar modo escuro">🌙</button>
+      <a href="login.html" class="btn btn-outline btn-sm">Entrar</a>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="como-usar.html">Como Usar</a></li>
+      <li><a href="produto.html">Produto</a></li>
+      <li><a href="quem-somos.html">Quem Somos</a></li>
+      <li><a href="referencias.html">Referências</a></li>
+      <li><a href="jogo.html">Jogo</a></li>
+    </ul>
+    <a href="login.html" class="btn btn-primary btn-block">Entrar</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Especificações do Produto</h1>
+        <p>Conheça todos os componentes e tecnologias que compõem o VoltCycle</p>
+      </div>
+
+      <!-- Prototype showcase -->
+      <div class="proto-card">
+        <img src="./images/image.png" alt="Protótipo VoltCycle montado na bicicleta">
+        <div class="proto-overlay">
+          <h3>Protótipo VoltCycle</h3>
+          <div class="proto-badges">
+            <span class="badge"><img src="./icons/bolt-solid.png" alt="bolt"> Latência do Sistema: &lt;180ms</span>
+            <span class="badge"><img src="./icons/wave-square-solid-full.svg" alt="wave"> Precisão BPM: ±3 BPM</span>
+            <span class="badge"><img src="./icons/battery-empty-solid.png" alt="battery"> Velocidade Mín. Carregamento: &gt;20km/h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card mt-32">
+        <h2>Componentes e Preços</h2>
+        <p class="mt-8">Detalhamento completo do custo de produção</p>
+        <div class="table-wrap mt-24">
+          <table class="price-table">
+            <thead>
+              <tr><th>Componente</th><th class="align-right">Preço (R$)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Arduino Mega 2560 + ESP WiFi</td><td class="align-right">R$ 120,00</td></tr>
+              <tr><td>Raspberry Pi 4</td><td class="align-right">R$ 350,00</td></tr>
+              <tr><td>MAX30102 (Sensor SpO₂/BPM)</td><td class="align-right">R$ 45,00</td></tr>
+              <tr><td>AD8232 (Sensor ECG)</td><td class="align-right">R$ 60,00</td></tr>
+              <tr><td>MPU6050 (Acelerômetro/Giroscópio)</td><td class="align-right">R$ 25,00</td></tr>
+              <tr><td>Motor BLDC + Controlador PID</td><td class="align-right">R$ 280,00</td></tr>
+              <tr><td>Dínamo para Carregamento</td><td class="align-right">R$ 90,00</td></tr>
+              <tr><td>Display TFT 2.8"</td><td class="align-right">R$ 55,00</td></tr>
+              <tr><td>Bateria Li-Ion 36V 10Ah</td><td class="align-right">R$ 180,00</td></tr>
+              <tr><td>Cabos, Conectores e Estrutura</td><td class="align-right">R$ 95,00</td></tr>
+            </tbody>
+            <tfoot>
+              <tr class="total-row"><td>Total</td><td class="align-right">R$ 1.300,00</td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="grid-3 mt-32">
+        <div class="card text-center">
+          <div class="icon-tile stat-icon"><img src="./icons/bolt-solid.png" alt="bolt" width="24" height="24"></div>
+          <h3>Latência do Sistema</h3>
+          <p class="stat-value text-gradient">&lt;180ms</p>
+        </div>
+        <div class="card text-center">
+          <div class="icon-tile stat-icon"><img src="./icons/wave-square-solid-full.svg" alt="wave" width="24" height="24"></div>
+          <h3>Precisão BPM</h3>
+          <p class="stat-value text-gradient">±3 BPM</p>
+        </div>
+        <div class="card text-center">
+          <div class="icon-tile stat-icon"><img src="./icons/battery-empty-solid.png" alt="battery" width="24" height="24"></div>
+          <h3>Velocidade Mín. Carregamento</h3>
+          <p class="stat-value text-gradient">&gt;20km/h</p>
+        </div>
+      </div>
+
+      <!-- Suppliers -->
+      <div class="card mt-32">
+        <h2>Fornecedores</h2>
+        <p class="mt-8">Parceiros confiáveis para aquisição de componentes</p>
+        <div class="grid-2 mt-24">
+          <div class="supplier-row">
+            <div><a href="https://www.fermarc.com.br/" target="_blank"><strong>Fermarc</strong></a><p>Componentes eletrônicos</p></div>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="supplier-row">
+            <div><a href="https://www.makerhero.com/" target="_blank"><strong>MakerHero</strong></a><p>Arduino e módulos</p></div>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="supplier-row">
+            <div><a href="https://www.usinainfo.com.br/" target="_blank"><strong>Usinainfo</strong></a><p>Sensores e displays</p></div>
+            <span aria-hidden="true">↗</span>
+          </div>
+          <div class="supplier-row">
+            <div><strong>Motors Manufacturer BR</strong><p>Motores BLDC</p></div>
+            <span aria-hidden="true">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical characteristics -->
+      <div class="tech-panel mt-32">
+        <h2 class="text-center">Características Técnicas</h2>
+        <div class="grid-3 mt-24">
+          <div class="card"><h4>Processamento</h4><p>Arduino Mega 2560 + Raspberry Pi 4 para IA</p></div>
+          <div class="card"><h4>Conectividade</h4><p>WiFi, Bluetooth, GPS integrado</p></div>
+          <div class="card"><h4>Sensores</h4><p>MAX30102, AD8232, MPU6050</p></div>
+          <div class="card"><h4>Display</h4><p>TFT 2.8" colorido com touch</p></div>
+          <div class="card"><h4>Bateria</h4><p>Li-Ion 36V 10Ah (~50km autonomia)</p></div>
+          <div class="card"><h4>Peso</h4><p>~2.5kg (módulo completo)</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="brand"><span class="brand-mark">V</span><span class="brand-name">VoltCycle</span></a>
+        <p>Módulo inteligente para bicicletas com monitoramento cardiovascular por IA, assistência elétrica adaptativa e carregamento cinético do celular.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="GitHub"><img src="./icons/github-brands-solid.png" alt="GitHub" width="24" height="24"></a>
+          <a href="#" aria-label="LinkedIn"><img src="./icons/linkedin-in-brands-solid.png" alt="LinkedIn" width="24" height="24"></a>
+          <a href="#" aria-label="E-mail"><img src="./icons/envelope-regular.png" alt="E-mail" width="24" height="24"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="como-usar.html">Como Usar</a></li>
+          <li><a href="produto.html">Produto</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Recursos</h3>
+        <ul>
+          <li><a href="referencias.html">Referências</a></li>
+          <li><a href="jogo.html">Jogo Interativo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 VoltCycle. Todos os direitos reservados.</span>
+      <span>Feito com ❤️ para ciclistas</span>
+    </div>
+  </div>
+</footer>
+
+<script src="shared/main.js"></script>
+<script src="produto.js"></script>
+</body>
+</html>

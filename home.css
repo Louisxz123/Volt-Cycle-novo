@@ -1,0 +1,79 @@
+.hero {
+  padding: 96px 0 72px;
+  background: linear-gradient(180deg, var(--color-bg) 0%, rgba(0,194,255,0.05) 53%, var(--color-bg) 92%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-copy h1 {
+  font-size: 3.4rem;
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.hero-lead { font-size: 1.2rem; max-width: 520px; }
+.hero-actions { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+.hero-price { margin-top: 40px; display: flex; align-items: baseline; gap: 12px; }
+.hero-price span { color: var(--color-text-muted); font-size: 1.05rem; }
+.hero-price strong { font-size: 1.9rem; }
+ 
+.hero-media { position: relative; }
+.hero-media-glow {
+  position: absolute; inset: 8% 6%;
+  background: linear-gradient(120deg, rgba(0,194,255,0.25), rgba(0,255,136,0.25));
+  filter: blur(48px);
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+.hero-media-frame {
+  position: relative; z-index: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+.hero-media-frame img { width: 100%; height: auto; display: block; }
+ 
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card h3 { font-size: 1.25rem; margin: 4px 0 12px; }
+
+.icon-tile img {
+  filter: brightness(0) invert(1);
+}
+ 
+.icon-tile-danger { background: rgba(239,68,68,0.15); color: #ef4444; }
+.icon-tile-danger img {
+  filter: invert(38%) sepia(92%) saturate(747%) hue-rotate(320deg) brightness(96%) contrast(95%);
+}
+ 
+.saiba-mais { background: linear-gradient(90deg, rgba(239,68,68,0.08), rgba(0,194,255,0.08), rgba(0,255,136,0.08)); }
+.saiba-mais-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  box-shadow: var(--shadow-md);
+}
+.saiba-mais-card .icon-tile { margin-bottom: 0; width: 56px; flex-shrink: 0; }
+.saiba-mais-copy h3 { font-size: 1.4rem; margin-bottom: 6px; }
+ 
+.cta-final h2 { font-size: 2rem; max-width: 640px; margin: 0 auto; }
+ 
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-copy h1 { font-size: 2.4rem; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .saiba-mais-card { grid-template-columns: 1fr; text-align: center; }
+  .saiba-mais-card .icon-tile { margin: 0 auto; }
+}
+
+/* Diferenciais Tecnológicos — ícone vira uma barra cheia com gradiente */
+.section-alt .grid-3 .icon-tile {
+  width: 100%;
+  height: 64px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}

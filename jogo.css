@@ -1,0 +1,53 @@
+.game-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.game-header {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--gradient-brand);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.game-header h2 { color: #fff; font-size: 1.4rem; }
+.game-record {
+  background: rgba(255,255,255,0.2);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.game-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+.stat { text-align: center; }
+.stat-label { display: block; font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 6px; }
+.stat-value { display: block; font-size: 1.6rem; font-weight: 700; font-family: var(--font-heading); }
+
+.gauge { margin-bottom: 20px; }
+.gauge-label { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 8px; color: var(--color-text-muted); }
+.gauge-track { height: 12px; border-radius: var(--radius-pill); background: var(--color-bg-soft); overflow: hidden; }
+.gauge-fill { height: 100%; border-radius: var(--radius-pill); transition: width .3s ease, background-color .3s ease; }
+.gauge-heart { background: #22c55e; }
+.gauge-heart.warn { background: #f59e0b; }
+.gauge-heart.danger { background: #ef4444; }
+.gauge-battery { background: var(--gradient-brand); }
+.gauge-speed { background: var(--color-cyan); }
+
+.game-btn { margin-top: 8px; font-size: 1rem; padding: 16px; }
+.game-btn.is-running { background: #ef4444; }
+
+.how-to { margin: 16px 0 0; padding-left: 20px; color: var(--color-text-muted); display: flex; flex-direction: column; gap: 8px; }
+.speed-controls { display: flex; gap: 12px; flex-wrap: wrap; }
+.speed-controls .btn { flex: 1; min-width: 160px; }
+
+@media (max-width: 700px) {
+  .game-stats { grid-template-columns: repeat(2, 1fr); }
+  .game-header { flex-direction: column; align-items: flex-start; }
+}

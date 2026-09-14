@@ -1,0 +1,14 @@
+.success-card { padding: 48px 40px; }
+.success-icon {
+  width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 16px;
+  background: rgba(0,255,136,0.15); color: #14b866;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; font-weight: 700;
+}
+[data-theme="dark"] .success-icon { color: #4bffb0; }
+
+.progress-wrap { display: flex; align-items: center; gap: 12px; }
+.progress-track { flex: 1; height: 8px; border-radius: var(--radius-pill); background: var(--color-bg-soft); overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: var(--gradient-brand); transition: width .2s linear; }
+.progress-label { font-size: 0.85rem; color: var(--color-text-muted); min-width: 40px; text-align: right; }
+.progress-caption { margin-top: 10px; font-size: 0.875rem; }

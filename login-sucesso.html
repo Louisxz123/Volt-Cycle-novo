@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bem-vindo — VoltCycle</title>
+<link rel="stylesheet" href="shared/tokens.css">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="login-sucesso.css">
+</head>
+<body>
+<main class="auth-page">
+  <div class="auth-card">
+    <div class="card auth-form-card success-card text-center">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h1>Entrar</h1>
+      <p class="mt-16" id="welcomeMsg">Bem-vindo ao VoltCycle. Redirecionando para o painel...</p>
+
+      <div class="progress-wrap mt-24">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-label"><span id="progressPct">0%</span></div>
+      </div>
+      <p class="progress-caption" id="progressCaption">Abrindo painel de monitoramento...</p>
+
+      <a href="index.html" class="btn btn-outline btn-block mt-24" id="skipBtn">Pular e ir para o início agora</a>
+    </div>
+  </div>
+</main>
+
+<script src="shared/main.js"></script>
+<script src="login-sucesso.js"></script>
+</body>
+</html>
