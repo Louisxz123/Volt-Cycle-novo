@@ -2,7 +2,7 @@
   "name": "volt-cycle2",
   "version": "1.0.0",
   "description": "",
-  "main": "BACKEND-TESTE.js",
+  "main": "index.js",
   "scripts": {
     "dev": "node --watch index.js"
   },
