@@ -12,6 +12,37 @@ app.get("/", (request, response) => {
         message: "TCC"
     })
 })
+
+app.get("/all-users", (request, response) => {
+    const selectCommand = "SELECT * FROM users"
+
+    sql.query(selectCommand, (error, email) => {
+        if(error) {
+            console.log(error)
+            return
+        }
+
+        response.json(email)
+    })
+})
+
+app.post("/create-user", (request, response) => {
+    const {email, password} = request.body
+
+    const insertCommand = "INSERT INTO users(email, password) VALUES (?, ?)"
+
+    sql.query(insertCommand, [email, password], (error) => {
+        if(error) {
+            console.log(error)
+            return
+        }
+
+        response.status(201).json({
+            message: "Usuário cadastrado!"
+        })
+    })
+})
+
 app.listen(3000, () => {
     console.log("vamo ver se funciona")
 })  
