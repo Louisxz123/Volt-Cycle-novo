@@ -10,6 +10,7 @@ POST http://localhost:3000/create-user
 Content-Type: application/json
 
 {
-    "email": "teste@example.com",
-    "password": "123456"
+    "email": "teste@example.co",
+    "password": "1234567",
+    "name": "Teste User"
 }

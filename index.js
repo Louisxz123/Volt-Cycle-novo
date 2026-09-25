@@ -27,11 +27,11 @@ app.get("/all-users", (request, response) => {
 })
 
 app.post("/create-user", (request, response) => {
-    const {email, password} = request.body
+    const {email, password, name} = request.body
 
-    const insertCommand = "INSERT INTO users(email, password) VALUES (?, ?)"
+    const insertCommand = "INSERT INTO users(email, password, name) VALUES (?, ?, ?)"
 
-    sql.query(insertCommand, [email, password], (error) => {
+    sql.query(insertCommand, [email, password, name], (error) => {
         if(error) {
             console.log(error)
             return
