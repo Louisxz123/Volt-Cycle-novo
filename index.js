@@ -26,6 +26,28 @@ app.get("/all-users", (request, response) => {
     })
 })
 
+app.post("/user-login", (request, response) => {
+    const {email, password} = request.body
+    const selectCommand = "SELECT * FROM users WHERE email = ? AND password = ?"
+
+    sql.query(selectCommand, [email, password], (error, results) => {
+        if(error) {
+            console.log(error)
+            return
+        }
+
+        if(results.length === 0) {
+            response.status(401).json({
+                message: "Email ou senha incorretos."
+            })
+            return
+        }
+
+        const { password: _, ...usuarioSemSenha } = results[0]
+        response.json(usuarioSemSenha)
+    })
+})
+
 app.post("/create-user", (request, response) => {
     const {email, password, name} = request.body
 
