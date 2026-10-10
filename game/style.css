@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #10161f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#game-container {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  border: 2px solid #2c3e50;
+  line-height: 0;
+}
+
+canvas {
+  display: block;
+}
