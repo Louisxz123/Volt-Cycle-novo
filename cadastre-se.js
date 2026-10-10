@@ -8,9 +8,9 @@ form.addEventListener("submit", async (event) => {
     message.textContent = ""
 
     const usuario = {
-        nome: document.getElementById("name").value.trim(),
+        name: document.getElementById("name").value.trim(),
         email: document.getElementById("email").value.trim(),
-        senha: document.getElementById("password").value.trim()
+        password: document.getElementById("password").value.trim()
     }
 
     try {
