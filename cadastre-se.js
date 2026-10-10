@@ -21,6 +21,8 @@ form.addEventListener("submit", async (event) => {
         })
         const dados = await resposta.json()
         if (!resposta.ok) throw new Error(dados.error || "Não foi possível cadastrar o usuário.")
+
+        window.VoltCycleAuth.setAuth({ name: usuario.name, email: usuario.email })
         window.location.href = "../index.html"
     } catch (error) {
         message.textContent = error.message
